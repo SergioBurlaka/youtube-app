@@ -44,19 +44,27 @@ html {
 		"main-video"
 		"related-video"
 		"coments";
-		grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
+    .main-video-card {
+      margin-bottom: 0px;
+
+    }
 	}
 }
 
 @media (max-width: 400px) {
 	.main-video-wrapper{
-		.statistics{
-			grid-template-columns: 1fr;
-			span:nth-child(2){
-				margin-top: 10px;
-				justify-self: start;
-
-			}
-		}
+    .main-video-card {
+      .statistics{
+        grid-template-columns: 1fr;
+        span:nth-child(2){
+          margin-top: 10px;
+          justify-self: start;
+  
+        }
+      }
+    }
+    
+		
 	}
 }

@@ -1,7 +1,9 @@
 
 .comment-card{
 	display: grid;
-	grid-template-columns: 40px 1fr;
+  // grid-template-columns: 40px 1fr;
+  grid-template-columns: repeat(auto-fit, 40px minmax(80px, 1fr));
+
   margin-bottom: 10px;
   
 	.header{
