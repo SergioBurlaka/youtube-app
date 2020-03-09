@@ -49,44 +49,10 @@ const VideoPage = () => {
 								)}
 							name={'Search'}
 						/>
-						<Button
-							onClick={() => {
-                console.log('previousVideos ', previousVideos);
-                // getStatisticToVideo(currentVideo.id.videoId)
-							}}
-							name={'check'}
-						/>
+					
 					</div>
 
-          {videosToShow.length > 0 && <h1>Videos to show</h1>}
-							{videosToShow.length > 0 &&
-								videosToShow.map((item, index) => {
-									return (
-										<div className="video-card" key={index}>
-											<div className="header">
-												<img alt="" src={item.snippet.thumbnails.medium.url} />
-											</div>
-											<div className="body">
-												<h2>{item.snippet.title}</h2>
-											</div>
-										</div>
-									);
-								})}
-          {previousVideos.length > 0 && <h1>Previos Video</h1>}
-							{previousVideos.length > 0 &&
-								previousVideos.map((item, index) => {
-									return (
-										<div className="video-card" key={index}>
-											<div className="header">
-												<img alt="" src={item.snippet.thumbnails.medium.url} />
-											</div>
-											<div className="body">
-												<h2>{item.snippet.title}</h2>
-											</div>
-										</div>
-									);
-								})}
-
+       
 					<div className="video-container">
 						<div className="main-video-wrapper">
 							{currentVideo && (
