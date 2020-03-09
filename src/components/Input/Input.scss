@@ -1,0 +1,38 @@
+.input-container{
+    label{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    
+    input {
+    
+        padding-right: calc(1.5em + .75rem);
+        background-repeat: no-repeat;
+        background-position: right calc(.375em + .1875rem) center;
+        background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+    
+    
+        &.invalid{
+            border-color: #dc3545;
+            background-image: url('../../assets/exclamation-circle.svg');
+        }
+    
+        &.valid{
+            border-color: #28a745;
+            background-image: url('../../assets/check.svg');
+        }
+     
+    
+        margin-top: 10px;
+        line-height: 25px;
+        font-size: 18px;
+        padding: 9px 36px 2px 12px;
+        color: #585858;
+        border-radius: 4px;
+        border: 1px solid #ced4da;
+    
+    }
+    
+}
