@@ -1,0 +1,43 @@
+.video-card{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 190px minmax(190px, 1fr));
+	grid-template-rows: 115px 1fr;
+	grid-gap: 10px;
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+
+	&:hover{
+		background-color: #dadada6b;
+  }
+  .header{
+		img {
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+		}
+	}
+
+	.body{
+		text-align: left;
+		overflow: hidden;
+
+		h2{
+			margin-top: 0px;
+			font-size: 15px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: normal;
+			line-height: 19px;
+		}
+
+	}
+
+}
+
+
+
+@media (max-width: 600px) {
+	.video-card{
+		grid-template-columns: repeat(auto-fit, 190px minmax(100px, 1fr));
+	}
+}

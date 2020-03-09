@@ -28,7 +28,7 @@ const getStatisticToVideo = (videoid, addStatistic) => {
       }
 		})
 		.catch((err) => {
-			console.log('catch err ', err);
+      console.log('err ', err);
 		});
 };
 
@@ -38,10 +38,12 @@ const getVideos = (inputValue, changeInputValue, addVideos) => {
 			const users = res.data;
 			if (users.items.length > 0) {
 				addVideos(users.items);
-			}
+      }
+      return res
 		})
 		.catch((err) => {
-			console.log('catch err ', err);
+      console.log('err ', err);
+      console.log('error message', err.response.data.error.message)
 		});
 	changeInputValue();
 };

@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const PATH =  'https://www.googleapis.com/youtube/v3';
-const KEY =  'AIzaSyCWmYzAoHjALFX-lmmsS48zjt3kjjTu4WE';
+// const KEY_MY =  'AIzaSyCWmYzAoHjALFX-lmmsS48zjt3kjjTu4WE';
+const KEY_MAMY =  'AIzaSyAnpvzda8hL_Hw-JqFwPL4vTmH5NkE2fKs';
 
 
 class ApiService {
@@ -12,7 +13,7 @@ class ApiService {
             params:{
                 part: 'snippet',
                 maxResult: 7,
-                key: KEY,
+                key: KEY_MAMY,
                 q: query,
                 type: 'video',
                 textFormat: 'plainText',
@@ -25,7 +26,7 @@ class ApiService {
             params:{
                 part: 'snippet',
                 maxResult: 10,
-                key: KEY,              
+                key: KEY_MAMY,              
                 videoId: videoId,
                 textFormat: 'plainText'
             }
@@ -36,7 +37,7 @@ class ApiService {
         return axios.get(PATH + "/videos", {
             params:{
                 part: 'statistics',
-                key: KEY,              
+                key: KEY_MAMY,              
                 id: videoId,
             }
         });
