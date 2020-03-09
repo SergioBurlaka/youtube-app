@@ -60,11 +60,21 @@ html {
         span:nth-child(2){
           margin-top: 10px;
           justify-self: start;
-  
         }
       }
     }
-    
-		
 	}
+}
+
+
+@media (max-width: 600px) {
+
+  .comments-list{
+    .comment-card{
+      .body{
+        margin-left: 10px;
+      }
+    }
+  }
+  
 }
