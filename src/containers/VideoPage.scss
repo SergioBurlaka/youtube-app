@@ -1,0 +1,84 @@
+html {
+	color: #303030;
+}
+
+.main-container{
+  overflow: hidden;
+
+}
+
+.users-section{
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.video-container{
+	padding: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas:
+	"main-video main-video related-video"
+	"coments coments related-video"
+	"coments coments related-video";
+	grid-gap: 20px;
+	max-width: 1280px;
+	margin: auto;
+
+	.main-video-wrapper{
+		grid-area: main-video;
+	}
+	.video-list-wrapper{
+    grid-area: related-video;
+    h1{
+      text-align: left;
+      margin-top: 0px;
+      font-size: 23px;
+      font-weight: 500;
+    }
+	}
+	.comments-list{
+		grid-area: coments;
+	}
+
+}
+
+@media (max-width: 1024px) {
+	.video-container{
+		padding: 10px;
+		grid-template-areas:
+		"main-video"
+		"related-video"
+		"coments";
+    grid-template-columns: 1fr;
+    .main-video-card {
+      margin-bottom: 0px;
+
+    }
+	}
+}
+
+@media (max-width: 400px) {
+	.main-video-wrapper{
+    .main-video-card {
+      .statistics{
+        grid-template-columns: 1fr;
+        span:nth-child(2){
+          margin-top: 10px;
+          justify-self: start;
+        }
+      }
+    }
+	}
+}
+
+
+@media (max-width: 600px) {
+  .comments-list{
+    .comment-card{
+      .body{
+        margin-left: 10px;
+      }
+    }
+  }
+  
+}

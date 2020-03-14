@@ -1,0 +1,56 @@
+
+.main-video-card{
+  margin-bottom: 30px;
+  border-bottom: 1px solid #d9d9d9;
+  padding-bottom: 10px;
+
+  .statistics{
+    margin-top: 10px;
+    font-weight: 500;
+    color: #6e6e6e;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    span:nth-child(2){
+      justify-self: end;
+  
+    }
+  }
+
+  .header{
+    position: relative;
+    padding-bottom: 56.25%; 
+    padding-top: 25px;
+    height: 0;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .body{
+    text-align: left;
+    
+    h2{
+      border-bottom: 1px solid #d9d9d9;
+      padding-bottom: 20px;
+      font-size: 18px;
+    }
+  }
+  
+  .count{
+    font-size: 16px;
+    &-wievs{
+      margin-right: 10px;
+    }
+    &-up{
+      margin-left: 5px;
+      margin-right: 20px;
+    }
+    &-down{
+      margin-left: 5px;
+    }
+  }
+
+}
