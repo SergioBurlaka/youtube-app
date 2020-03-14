@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 import VideContext from './videoContext';
 import ApiService from '../ApiService/index';
 
@@ -53,11 +52,6 @@ const GlobalState = (props) => {
 	const [ currentVideo, setVideo ] = useState(null);
 	const [ currentVideoStatistics, setVideoStatistics ] = useState(null);
 
-	const [ currentInput, setInputValue ] = useState('');
-
-	//  let currentInputValue = ''
-	//  let currentChangeInputValue = () =>{};
-
 	const addVideos = (newVideos) => {
 		console.log('addVideos', newVideos);
 		setVideos(newVideos);
@@ -72,16 +66,7 @@ const GlobalState = (props) => {
 		getStatisticToVideo(video.id.videoId, setVideoStatistics);
 	};
 
-	//   useEffect(() => {
-	//     console.log('Do something after counter has changed', currentInput);
-	//     // getVideos(currentInputValue, currentChangeInputValue, addVideos)
-
-	//  }, [currentInput]);
-
 	const serachVideos = (inputValue, changeInputValue) => {
-		setInputValue(inputValue);
-		//  currentInputValue = inputValue
-		//  currentChangeInputValue = changeInputValue;
 		setPreviousVideos(videos.slice(0, 2));
 		getVideos(inputValue, changeInputValue, addVideos);
 	};
